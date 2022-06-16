@@ -1,0 +1,24 @@
+plugins:
+  - jekyll-seo-tag
+  
+collections:
+  projects:
+    output: true
+
+social:
+  name: notstupid.name
+  links:
+    - https://www.instagram.com/notstupid.name
+
+logo: /images/logo.png
+url: https://notstupid.name
+
+title: ""
+lang: "ru_RU"
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: /images/logo.png
