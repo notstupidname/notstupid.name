@@ -94,13 +94,98 @@ h4 {
 
 p {
     margin-bottom: 1em;
-    max-width: 55em;
+    max-width: 50em;
 }
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+    a:hover {
+        opacity: 0.85;
+    }
+    
+    a:active {
+        opacity: 0.65;
+    }
 
 /* Layout */
 
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr auto;
     min-height: 100vh;
 }
+
+/* Header */
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+    padding: 4rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+    #header a {
+        text-decoration: none;
+        font-size: 2rem;
+        line-height: 1em;
+    }
+
+        #header a:not(.logo):hover {
+            background: var(--text-color);
+            color: var(--back-color);
+        }
+
+        #header a:not(:first-child) {
+            margin: 0 0.5em;
+        }
+
+        #header a:last-child {
+            margin-right: 0;
+        }
+    
+    #header a.current {
+        background: var(--text-color);
+        color: var(--back-color);
+    }
+
+    #header a.logo {
+        margin-right: auto;
+    }
+
+    #header a.logo span {
+        background: var(--text-color);
+        color: var(--back-color);
+    }
+
+main {
+    margin: auto;
+    margin-top: 12rem;
+}
+
+    @media screen and (max-width: 1600px) {
+
+        body {
+            grid-template-rows: auto 1fr auto;
+        }
+
+        #header {
+            position: relative;
+        }
+
+        main {
+            margin-top: 0;
+        }
+
+    }
