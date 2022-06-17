@@ -20,7 +20,7 @@
         body.classList.add('transition');
         window.setTimeout(function() {
             window.location.href = href;
-        }, 250);
+        }, 150);
     }
     
     body.addEventListener('click', function(e) {

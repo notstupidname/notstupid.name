@@ -1,0 +1,7 @@
+<header id="header">
+    <a href="/" class="logo">
+        {%if page.url == '/'%}<span>not</span>{%else%}not{%endif%}stupid<br />name
+    </a>
+    <a href="/doing/"{%if page.url contains 'doing'%} class="current"{%endif%}>делаю</a>
+    <a href="/done/"{%if page.url contains 'done'%} class="current"{%endif%}>сделал</a>
+</header>
