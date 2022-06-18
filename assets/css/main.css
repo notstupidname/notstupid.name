@@ -105,6 +105,8 @@ a {
     -webkit-tap-highlight-color: transparent;
     text-decoration: underline;
     cursor: pointer;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 2px;
 }
 
     a:hover {
