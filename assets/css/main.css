@@ -73,6 +73,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1.4em 0 1em 0;
     font-stretch: condensed;
     text-transform: uppercase;
+    line-height: 1em;
 }
 
 h1 {
@@ -169,6 +170,12 @@ body {
         color: var(--back-color);
     }
 
+#footer {
+    padding: 2rem 4rem;
+    opacity: 0.5;
+    font-size: 80%;
+}
+
 main {
     margin: 12rem 4rem 0;
     display: grid;
@@ -208,6 +215,10 @@ main {
         padding: 4rem 2rem;
     }
 
+    #footer {
+        padding: 2rem;
+    }
+
     main {
         margin: 0;
     }
@@ -220,12 +231,16 @@ main {
 @media screen and (max-width: 550px) {
 
     #header {
-        padding: 2rem 1rem;
+        padding: 2rem 1rem 3rem;
     }
 
         #header a {
             font-size: 1.5rem;
         }
+    
+    #footer {
+        padding: 2rem 1rem;
+    }
 
     .container {
         padding: 0 1rem;
