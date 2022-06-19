@@ -73,7 +73,8 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1.4em 0 1em 0;
     font-stretch: condensed;
     text-transform: uppercase;
-    line-height: 1em;
+    line-height: 1.2em;
+    letter-spacing: 0.1em;
 }
 
 h1 {
@@ -199,20 +200,19 @@ main {
 
 .worklist {
     display: grid;
-    grid-template-columns: 3em auto;
-    gap: 1rem;
+    grid-template-columns: 4em auto;
+    gap: 1rem 1.5rem;
 }
 
-    .worklist h2 {
+    .worklist h3 {
         margin: 0;
-        line-height: 1.3em;
     }
 
-        .worklist h2 a {
+        .worklist h3 a {
             text-decoration: none;
         }
 
-        .worklist h2 a:hover {
+        .worklist h3 a:hover {
             text-decoration: underline;
         }
 
