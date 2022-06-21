@@ -118,6 +118,11 @@ a {
         opacity: 0.65;
     }
 
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+    }
+
 /* Layout */
 
 body {
