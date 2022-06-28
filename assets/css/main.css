@@ -117,7 +117,7 @@ p {
 a {
     color: var(--text-color);
     text-decoration: none;
-    transition: opacity 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     -webkit-tap-highlight-color: transparent;
     text-decoration: underline;
     cursor: pointer;
@@ -127,6 +127,8 @@ a {
 
     a:hover {
         opacity: 0.85;
+        background-color: var(--text-color);
+        color: var(--back-color);
     }
     
     a:active {
@@ -162,14 +164,13 @@ body {
 }
 
     #header a {
-        text-decoration: none;
         font-size: 2rem;
         line-height: 1em;
     }
 
-        #header a:not(.logo):hover {
-            background: var(--text-color);
-            color: var(--back-color);
+        #header a.logo:hover {
+            background: var(--back-color);
+            color: var(--text-color);
         }
 
         #header a:not(:first-child) {
@@ -187,6 +188,7 @@ body {
 
     #header a.logo {
         margin-right: auto;
+        text-decoration: none;
     }
 
     #header a.logo span {
@@ -228,14 +230,6 @@ main {
     .worklist h3 {
         margin: 0;
     }
-
-        .worklist h3 a {
-            text-decoration: none;
-        }
-
-        .worklist h3 a:hover {
-            text-decoration: underline;
-        }
 
 @media screen and (max-width: 1420px) {
 
