@@ -123,11 +123,14 @@ a {
     cursor: pointer;
     text-underline-offset: 0.2em;
     text-decoration-thickness: 2px;
+    background: linear-gradient(var(--text-color) 0 0) var(--p, 0) / var(--p, 0) no-repeat;
+    transition: .4s, background-position 0s;
 }
 
     a:hover {
         opacity: 0.85;
-        background-color: var(--text-color);
+        --p: 100%;
+       /*  background-color: var(--text-color); */
         color: var(--back-color);
     }
     
