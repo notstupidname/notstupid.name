@@ -4,20 +4,28 @@
 	<meta name="mobile-web-app-capable" content="yes"/>
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="color-scheme" content="light dark">
-	<script>
-		// If `prefers-color-scheme` is not supported, fall back to light mode.
-		// In this case, light.css will be downloaded with `highest` priority.
-		if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
-		  document.documentElement.style.display = 'none';
-		  document.head.insertAdjacentHTML(
-			  'beforeend',
-			  '<link rel="stylesheet" href="/assets/css/light.min.css" onload="document.documentElement.style.display = \'\'">'
-		  );
-		}
-	  </script>
-	<link rel="stylesheet" href="/assets/css/dark.min.css" media="(prefers-color-scheme: dark)">
-	<link rel="stylesheet" href="/assets/css/light.min.css" media="(prefers-color-scheme: light)">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75,350;100,400;100,500&display=swap" rel="stylesheet">
+    <style>
+        html {
+            font-family: 'Opens Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            scrollbar-width: thin;
+            scrollbar-gutter: stable;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-weight: 300;
+			margin: 1.4em 0 1em 0;
+			font-stretch: condensed;
+			text-transform: uppercase;
+			line-height: 1.2em;
+			letter-spacing: 0.1em;
+        }
+    </style>
+    <meta name="color-scheme" content="light dark">
 	<link rel="stylesheet" href="/assets/css/main.min.css" />
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152.png" />
@@ -26,8 +34,6 @@
 	<meta name="application-name" content="!(stupid.name)"/>
 	<meta name="theme-color" content="#FFFFFF"/>
 	<meta name="google-site-verification" content="insert code here" />
-	<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 	<meta name="msapplication-TileColor" content="#FFFFFF" />
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
 	<meta property="og:type" content="article" />
