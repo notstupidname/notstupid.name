@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'Cascadia Mono';
+    src: local('Cascadia Mono'), url(/assets/font/CascadiaMono.woff2) format('woff2');
+}
+
 html {
     color-scheme: light dark;
 }
@@ -55,18 +60,109 @@ html {
     background-color: var(--text-color);
 }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
     vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
@@ -79,7 +175,8 @@ table {
 
 @media screen and (max-width: 480px) {
 
-    html, body {
+    html,
+    body {
         min-width: 320px;
         font-size: 16px;
     }
@@ -90,20 +187,30 @@ body {
     background: var(--back-color);
 }
 
-    body.is-loading *, body.is-loading *:before, body.is-loading *:after {
-        animation: none !important;
-        transition: none !important;
-    }
+body.is-loading *,
+body.is-loading *:before,
+body.is-loading *:after {
+    animation: none !important;
+    transition: none !important;
+}
 
 /* Type */
 
-body, input, select, textarea {
+body,
+input,
+select,
+textarea {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 300;
     margin: 1.4em 0 1em 0;
     font-stretch: condensed;
@@ -146,21 +253,21 @@ a {
     transition: .4s, background-position 0s;
 }
 
-    a:hover {
-        opacity: 0.85;
-        --p: 100%;
-       /*  background-color: var(--text-color); */
-        color: var(--back-color);
-    }
-    
-    a:active {
-        opacity: 0.65;
-    }
+a:hover {
+    opacity: 0.85;
+    --p: 100%;
+    /*  background-color: var(--text-color); */
+    color: var(--back-color);
+}
+
+a:active {
+    opacity: 0.65;
+}
 
 img {
     max-inline-size: 100%;
     block-size: auto;
-    }
+}
 
 /* Layout */
 
@@ -183,38 +290,38 @@ body {
     top: 0;
 }
 
-    #header a {
-        font-size: 2rem;
-        line-height: 1em;
-    }
+#header a {
+    font-size: 2rem;
+    line-height: 1em;
+}
 
-        #header a.logo:hover {
-            background: var(--back-color);
-            color: var(--text-color);
-        }
+#header a.logo:hover {
+    background: var(--back-color);
+    color: var(--text-color);
+}
 
-        #header a:not(:first-child) {
-            margin: 0 0.5em;
-        }
+#header a:not(:first-child) {
+    margin: 0 0.5em;
+}
 
-        #header a:last-child {
-            margin-right: 0;
-        }
-    
-    #header a.current {
-        background: var(--text-color);
-        color: var(--back-color);
-    }
+#header a:last-child {
+    margin-right: 0;
+}
 
-    #header a.logo {
-        margin-right: auto;
-        text-decoration: none;
-    }
+#header a.current {
+    background: var(--text-color);
+    color: var(--back-color);
+}
 
-    #header a.logo span {
-        background: var(--text-color);
-        color: var(--back-color);
-    }
+#header a.logo {
+    margin-right: auto;
+    text-decoration: none;
+}
+
+#header a.logo span {
+    background: var(--text-color);
+    color: var(--back-color);
+}
 
 #footer {
     padding: calc(var(--gap)/2) var(--gap);
@@ -224,23 +331,22 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 
-        [full-start] 1fr [container-start]
-        minmax(0, var(--column-width)) [container-end] 1fr [full-end];
+    grid-template-columns:
+        [full-start] 1fr [container-start] minmax(0, var(--column-width)) [container-end] 1fr [full-end];
     column-gap: var(--gap);
 }
 
-    main > * {
-        grid-column: container;
-    }
+main>* {
+    grid-column: container;
+}
 
-    main > img {
-        grid-column: full;
-        display: block;
-        width: 100%;
-        max-height: 90vh;
-        object-fit: contain;
-    }
+main>img {
+    grid-column: full;
+    display: block;
+    width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+}
 
 .image {
     margin: 2rem 0 3rem;
@@ -252,9 +358,9 @@ main {
     gap: 1rem 1.5rem;
 }
 
-    .worklist h3 {
-        margin: 0;
-    }
+.worklist h3 {
+    margin: 0;
+}
 
 @media screen and (max-width: 1420px) {
 
@@ -269,7 +375,7 @@ main {
     :root {
         --gap: 2rem;
     }
-    
+
     #header {
         padding: calc(var(--gap)*2) var(--gap);
     }
@@ -281,14 +387,14 @@ main {
     :root {
         --gap: 1rem;
     }
-    
+
     #header {
         padding: calc(var(--gap)*2) var(--gap) calc(var(--gap)*3);
     }
 
-        #header a {
-            font-size: 1.5rem;
-        }
+    #header a {
+        font-size: 1.5rem;
+    }
 
 }
 
@@ -371,31 +477,31 @@ body.transition:after {
     display: none !important;
 }
 
-.fade-in{
+.fade-in {
     animation: 0.5s fadeIn;
 }
 
-.fade-out{
+.fade-out {
     animation: 0.5s fadeOut;
 }
-  
-@keyframes fadeIn{
-    from{
-        opacity:0;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
 
-    to{
-        opacity:1;
+    to {
+        opacity: 1;
     }
 }
-  
-  
-@keyframes fadeOut{
-    from{
-        opacity:1;
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
     }
-    
-    to{
-        opacity:0;
+
+    to {
+        opacity: 0;
     }
 }
